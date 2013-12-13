@@ -27,17 +27,12 @@
 
   .clear
 
-  %h2 Videos
+  .wide-images
 
-  %p Jan discusses how to treat acne in adults:
-  %iframe(width='420' height='315' src='http://www.youtube.com/embed/Ib8Lhmiw5jM' frameborder='0' allowfullscreen)
+    %h2 Before/After Pictures
+    - key = 'jan-marini-facials'
 
-  %p Keep your skin in the best condition by following Jan's recommendations:
-  %iframe(width='420' height='315' src='http://www.youtube.com/embed/UlMLQZqT0Gs' frameborder='0' allowfullscreen)
-
-  %p
-    More information can be found at
-    %a(href='http://www.janmarini.com/') www.janmarini.com
+    = partial :'partials/treatments/before-after', locals: {key: key, before_image: 'before.jpg', before_text: 'Acne scarring before dermaroller treatment', after_image: 'after.jpg', after_text: 'Acne scarring improvement after two dermaroller treatments', main_text: ''}
 
 #secondary
   = partial :'partials/gift-vouchers'

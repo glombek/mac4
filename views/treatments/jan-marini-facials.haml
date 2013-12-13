@@ -17,6 +17,13 @@
     %a(href='/products/jan-marini') Jan Marini products
     at the Clinic.
 
+  .wide-images
+
+    %h2 Before/After Pictures
+    - key = 'jan-marini-facials'
+
+    = partial :'partials/treatments/before-after', locals: {key: key, before_image: 'before.jpg', before_text: 'Acne scarring before dermaroller treatment', after_image: 'after.jpg', after_text: 'Acne scarring improvement after two dermaroller treatments', main_text: ''}
+
 #secondary
   = partial :'partials/treatments/list'
   = partial :'partials/special-offer', locals: {current_page: 'jan-marini-facials', type: 'secondary'}

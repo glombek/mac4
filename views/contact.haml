@@ -3,41 +3,66 @@
 = partial :'partials/on-the-move'
 
 #primary
-  %h1 How to contact us
+	%h1 How to contact us
 
-  %p You can find us at Basepoint business centre, Winchester.
-  %p We are open 10am &ndash; 5pm on weekdays except for Wednesdays when we close at 2pm.
-  %p On Tuesdays we are open until 7pm for evening appointments.
-  %p We also open every other Saturday, 10am &ndash; 1pm. Please ask for further details. 
+	= partial :'partials/map'
 
-  .clear
+	.clear
 
-  .float.right
-    = partial :'partials/map'
+	.float.right
+		%p
+			The Medical Aesthetic Clinic
+			%br
+			Basepoint Business Centre
+			%br
+			Unit 10
+			%br
+			1 Winnall Valley Road
+			%br
+			Winchester
+			%br
+			SO23 0LD
 
-  %p
-    The Medical Aesthetic Clinic
-    %br
-    Basepoint Business Centre
-    %br
-    Unit 10
-    %br
-    1 Winnall Valley Road
-    %br
-    Winchester
-    %br
-    SO23 0LD
+		%p
+			Contact us by phone or email:
+			%br
+			01962 840400
+			%br
+			= partial :'partials/email-address'
 
-  %p
-    Contact us by phone or email:
-    %br
-    01962 840400
-    %br
-    = partial :'partials/email-address'
+		%p
+			%a{href: "https://mapsengine.google.com/map/embed?mid=znAqrdAUBCAY.korD-e2x0tNM", target: '_blank'} Find us on Google Maps &gt;
 
-  %p
-    %a{href: "https://maps.google.co.uk/maps?q=Basepoint+Business+Centres,+Winnall+Valley+Road,+Winchester&hl=en&ll=51.066367,-1.299112&spn=0.004544,0.006813&sll=51.058606,-1.305184&sspn=0.01818,0.027251&oq=basepoint+&t=h&hq=Basepoint+Business+Centres,+Winnall+Valley+Road,+Winchester&radius=15000&z=17", target: '_blank'} Find us on Google Maps &gt;
+	
+	.opening-times
+		%h2 Opening times
+
+		%ul
+			%li
+				%strong Mondays
+				%span 0930 - 1700
+			%li
+				%strong Tuesdays
+				%span 0930 - 1700
+			%li
+				%strong Wednesdays
+				%span CLOSED
+			%li
+				%strong Thursdays
+				%span 0930 - 1700
+			%li
+				%strong Fridays
+				%span 0930 - 1700
+			%li
+				%strong Saturdays
+				%span 1000 - 1300 
+				%em alternate Saturdays only
+			%li
+				%strong Sundays
+				%span CLOSED
+
+	.clear
 
 #secondary
-  = partial :'partials/treatments/list'
-  = partial :'partials/products/list'
+	= partial :'partials/treatments/list'
+	= partial :'partials/products/list'

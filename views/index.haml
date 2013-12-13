@@ -1,6 +1,28 @@
 #home
   = partial :'partials/on-the-move'
 
+  .home-services
+    %ul
+      %li.home-service
+        %img(src='/images/treatments/wrinkle-relaxing-injections/wrinkle-relaxing-injections-63.jpg')
+        %h2 Wrinkle relaxing injections
+        %p for a softened, natural look using Botulinum Toxin Type A
+        %a(href='/treatments/wrinkle-relaxing-injections') find out more
+
+      %li.home-service
+        %img(src='/images/treatments/dermal-fillers/dermal-fillers-home.jpg')
+        %h2 Dermal fillers
+        %p to remove facial lines, wrinkles and folds
+        %a(href='/treatments/dermal-fillers') find out more
+
+      %li.home-service
+        %img(src='/images/treatments/ipl-permanent-hair-reduction/ipl-permanent-hair-reduction-63.jpg')
+        %h2 Permanent hair reduction
+        %p for permanent hair reduction
+        %a(href='/treatments/ipl-permanent-hair-reduction') find out more
+
+  .clear
+
   .half.left
     = partial :'partials/special-offer-home-page'
   .half.right
