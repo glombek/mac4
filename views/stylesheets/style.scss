@@ -106,6 +106,27 @@ a {
 }
 
 header {
+	height: 140px;
+	border-bottom: 1px solid #DDD;
+	margin: 0 5px 30px;
+
+	.logo {
+		display: block;
+		background: url(/images/logo.png) 0 0 no-repeat;
+		height: 120px;
+		width: 230px;
+		position: absolute;
+		font-size: 0;
+		margin: 10px 0 0;
+	}
+
+	.header-details {
+		text-align: right;
+		color: #999;
+		font-family: Georgia, serif;
+		padding: 2px 0 0;
+	}
+
 	p.title {
 		text-align: center;
 		font-size: 1.5em;
@@ -115,25 +136,25 @@ header {
 	nav {
 		ul {
 			text-align: center;
-			font-size: 0.8em;
+			font-size: 1.0em;
 			color: #735A9C;
 			margin-bottom: 1.5em;
+			float: right;
 
 			li {
-				display: inline;
-				&:before {
-					content: ' | ';
-				}
-				&:first-child:before {
-					content: '';
-				}
+				display: block;
+				float: left;
 
 				a {
-					padding: 0 0.1em;
+					padding: 0.4em 0.8em;
+					display: block;
 					text-decoration: none;
+					@include border-radius(3px);
+					//@include transition(ease-in-out 250ms all);
+					float: left;
 
 					&:hover {
-						text-decoration: underline;
+						background: #EEE;
 					}
 				}
 			}
@@ -907,6 +928,81 @@ footer {
 		}
 	}
 
+}
+
+@media screen and (max-width: 800px) {
+	.main-nav {
+			width: 50%;
+			float: right;
+			clear: both;
+		}
+
+	.header-details {
+		width: 50%;
+			float: right;
+	}
+
+	header {
+		height: 200px;
+	}
+
+	.home-services {
+		ul {
+			li {
+				a {
+					margin: 0 0 0 40px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	header {
+		height: 310px;
+
+		.main-nav {
+			width: 100%;
+			text-align: center;
+
+			ul {
+				text-align: center;
+
+				li {
+					display: inline;
+					float: none;
+				}
+			}
+		}
+
+		.logo {
+			left: 50%;
+			margin: 10px 0 0 -115px;
+		}
+
+		.header-details {
+			width: 100%;
+			margin: 140px 0 0;
+			text-align: center;
+		}
+	}
+
+	#home {
+		.home-services {
+			ul {
+				.home-service {
+					width: 94% !important;
+					text-align: center;
+					padding-top: 40px;
+
+					img {
+						float: none;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
 }
 
 
