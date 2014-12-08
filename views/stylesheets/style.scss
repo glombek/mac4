@@ -430,6 +430,12 @@ header {
 		font-size: 1.3em;
 		color: #c09853;
 	}
+
+	.notice__content {
+		max-width: 650px;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
 }
 
 #home {
